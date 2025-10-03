@@ -3,6 +3,6 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("ziolkoxd");
+        System.out.println("wagon cwel");
     }
 }
