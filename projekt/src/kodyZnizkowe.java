@@ -22,5 +22,9 @@ public class kodyZnizkowe {
         this.znizka = znizka;
     }
 
+    public String getInfo(){
+       return getKodZnizkowy() + getZnizka();
+    }
+
 
 }
