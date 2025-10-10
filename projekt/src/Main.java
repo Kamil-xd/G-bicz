@@ -16,39 +16,8 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             int wybor = sc.nextInt();
 
-
-
-
-
-            switch (wybor){
-
-                case 1:
-
-
-
-
-
-
-
-                    break;
-
-                case 2:
-
-                    break;
-
-                case 3:
-
-                    break;
-
-                case 4:
-
-                    break;
-
-                case 5:
-
-                    break;
-
-            }
+            Interfejs i=new Interfejs();
+            i.response1(wybor);
 
 
 

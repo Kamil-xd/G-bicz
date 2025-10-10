@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Interfejs {
 
-    public Interfejs(){
+    public Interfejs() {
 
     }
 
@@ -328,7 +328,6 @@ public class Interfejs {
 
 
 
-}
 
 
 
