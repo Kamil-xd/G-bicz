@@ -48,6 +48,8 @@ public class Interfejs {
 
             case 1:
 
+
+
                 break;
 
             /*Usun Produkt*/
@@ -126,6 +128,36 @@ public class Interfejs {
             /*Działania na Hurtownikach*/
 
             case 1:
+                Scanner sc5 = new Scanner(System.in);
+                System.out.println("Dodaj Hurtownika [1] Usun Hurtownika [2] Zmien Hurtownika [3] Wyswietl Hurtownikow [4] Zakoncz [5]");
+
+                int wybor5 = sc5.nextInt();
+
+                switch (wybor5) {
+
+                    case 1:
+
+                        break;
+
+                    case 2:
+
+                        break;
+
+                    case 3:
+
+                        break;
+
+                    case 4:
+
+                        break;
+
+                    case 5:
+
+                        break;
+
+
+
+                }
 
 
 
@@ -140,6 +172,37 @@ public class Interfejs {
 
             case 2:
 
+                Scanner sc6 = new Scanner(System.in);
+                System.out.println("Dodaj Dostawce [1] Usun Dostawce [2] Zmien Dostawce [3] Wyswietl Dostawców [4] Zakoncz [5]");
+
+                int wybor6 = sc6.nextInt();
+
+                switch (wybor6) {
+
+                    case 1:
+
+                        break;
+
+                    case 2:
+
+                        break;
+
+                    case 3:
+
+                        break;
+
+                    case 4:
+
+                        break;
+
+                    case 5:
+
+                        break;
+
+
+
+                }
+
 
 
 
@@ -151,6 +214,38 @@ public class Interfejs {
             /*Działania na Prawcownikach*/
 
             case 3:
+
+
+                Scanner sc7 = new Scanner(System.in);
+                System.out.println("Dodaj Pracownika [1] Usun Pracownika [2] Zmien Pracownika [3] Wyswietl Pracownikow [4] Zakoncz [5]");
+
+                int wybor7 = sc7.nextInt();
+
+                switch (wybor7) {
+
+                    case 1:
+
+                        break;
+
+                    case 2:
+
+                        break;
+
+                    case 3:
+
+                        break;
+
+                    case 4:
+
+                        break;
+
+                    case 5:
+
+                        break;
+
+
+
+                }
 
 
 
@@ -173,12 +268,59 @@ public class Interfejs {
 
         return "";
     }
-//
-//    public String zarzadzanieZamowieniamiSprzedaza(){
-//
-//
-//        return "";
-//    }
+
+    public String zarzadzanieZamowieniamiSprzedaza(){
+        Scanner sc8 = new Scanner(System.in);
+
+        System.out.println("Podaj co chcesz zrobic dalej");
+        System.out.println("Kody Znizkowe [1] Koszyk [2] Shipping Info [3] Zamowienia [4] Zwroty [5] Zakoncz [6]");
+
+        int response8 = sc8.nextInt();
+
+        switch (response8) {
+
+            /*Kody Znizkowe*/
+
+            case 1:
+
+                break;
+
+            /*Koszyk*/
+
+
+            case 2:
+
+                break;
+
+            /*Shipping Info*/
+
+            case 3:
+
+                break;
+
+            /*Zamowienia*/
+
+            case 4:
+
+                break;
+
+            /*Zwroty*/
+
+            case 5:
+
+                break;
+
+            /*Zakonczy*/
+
+            case 6:
+
+                break;
+        }
+
+
+
+        return "";
+    }
 
 
 
