@@ -2,7 +2,7 @@ public class kodyZnizkowe {
     private String kodZnizkowy;
     private double znizka;
 
-   public kodyZnizkowe() {
+   public kodyZnizkowe(String kodZnizkowy, double znizka) {
 
    }
 
@@ -14,6 +14,13 @@ public class kodyZnizkowe {
        return znizka;
     }
 
+    public void setKodZnizkowy(String kodZnizkowy) {
+        this.kodZnizkowy = kodZnizkowy;
+    }
+
+    public void setZnizka(double znizka) {
+        this.znizka = znizka;
+    }
 
 
 }
