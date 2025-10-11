@@ -12,6 +12,7 @@ public class agdNaSprzedaz {
             this.markaAGD = markaAGD;
         }
         //rodzaj
+
         public String getRodzajAGD(){
             return rodzajAGD;
         }
@@ -21,6 +22,7 @@ public class agdNaSprzedaz {
         }
 
         //cena
+
         public Double getCenaAGD(){
             return cenaAGD;
         }
@@ -30,6 +32,7 @@ public class agdNaSprzedaz {
         }
 
         //marka
+
         public String getMarkaAGD(){
             return markaAGD;
         }

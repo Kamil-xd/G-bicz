@@ -12,6 +12,7 @@ public class ciuchyNaSprzedaz {
         this.kolorUbran = kolorUbran;
     }
 //rodzaj
+
     public String getRodzajUbran(){
         return rodzajUbran;
     }
@@ -21,6 +22,7 @@ public class ciuchyNaSprzedaz {
     }
 
     //cena
+
     public Double getCenaUbran(){
         return cenaUbran;
     }
@@ -30,6 +32,7 @@ public class ciuchyNaSprzedaz {
     }
 
     //kolor
+
     public String getKolorUbran(){
         return kolorUbran;
     }
@@ -39,6 +42,7 @@ public class ciuchyNaSprzedaz {
     }
 
     //rozmiar
+
     public String getRozmiarUbran(){
         return rozmiarUbran;
     }

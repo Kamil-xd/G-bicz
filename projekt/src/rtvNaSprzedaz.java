@@ -11,6 +11,7 @@ public class rtvNaSprzedaz {
         this.markaRTV= markaRTV;
     }
     //rodzaj
+
     public String getRodzajRTV(){
         return rodzajRTV;
     }
@@ -20,6 +21,7 @@ public class rtvNaSprzedaz {
     }
 
     //cena
+
     public Double getCenaRTV(){
         return cenaRTV;
     }
@@ -29,6 +31,7 @@ public class rtvNaSprzedaz {
     }
 
     //marka
+
     public String getMarkaRTV(){
         return markaRTV;
     }

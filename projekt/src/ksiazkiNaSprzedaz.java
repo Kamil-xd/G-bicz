@@ -12,6 +12,7 @@ public class ksiazkiNaSprzedaz {
         this.autorKsiazki = autorKsiazki;
     }
     //rodzaj
+
     public String getRodzajKsiazki(){
         return rodzajKsiazki;
     }
@@ -21,6 +22,7 @@ public class ksiazkiNaSprzedaz {
     }
 
     //cena
+
     public Double getCenaKsiazki(){
         return cenaKsiazki;
     }
@@ -30,6 +32,7 @@ public class ksiazkiNaSprzedaz {
     }
 
     //autor
+
     public String getAutorKsiazki(){
         return autorKsiazki;
     }
@@ -39,6 +42,7 @@ public class ksiazkiNaSprzedaz {
     }
 
     //isbn
+
     public Integer getIsbnKsiazki(){
         return isbnKsiazki;
     }
