@@ -2,13 +2,15 @@ public class rtvNaSprzedaz {
     private String rodzajRTV ;
     private Double cenaRTV;
     private String markaRTV;
+    private String nazwaRTV;
 
 
 
-    public rtvNaSprzedaz(String markaRTV, Double cenaRTV, String rodzajRTV){
+    public rtvNaSprzedaz(String markaRTV, Double cenaRTV, String rodzajRTV,  String nazwaRTV) {
         this.cenaRTV = cenaRTV;
         this.rodzajRTV = rodzajRTV;
         this.markaRTV= markaRTV;
+        this.nazwaRTV = nazwaRTV;
     }
     //rodzaj
 
@@ -39,5 +41,11 @@ public class rtvNaSprzedaz {
     public void setMarkaRTV(String markaRTV) {
         this.markaRTV = markaRTV;
     }
+
+    //nazwa
+
+    public String getNazwaRTV(){return nazwaRTV;}
+
+    public void setNazwaRTV(String nazwaRTV) {this.nazwaRTV = nazwaRTV;}
 
 }

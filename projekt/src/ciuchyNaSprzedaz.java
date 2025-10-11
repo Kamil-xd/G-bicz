@@ -3,13 +3,15 @@ public class ciuchyNaSprzedaz {
     private Double cenaUbran;
     private String rozmiarUbran;
     private String kolorUbran;
+    private String nazwaUbran;
 
 
-    public ciuchyNaSprzedaz(String rodzajUbran, Double cenaUbran, String rozmiarUbran, String kolorUbran){
+    public ciuchyNaSprzedaz(String rodzajUbran, Double cenaUbran, String rozmiarUbran, String kolorUbran, String nazwaUbran) {
         this.cenaUbran = cenaUbran;
         this.rozmiarUbran = rozmiarUbran;
         this.rodzajUbran = rodzajUbran;
         this.kolorUbran = kolorUbran;
+        this.nazwaUbran = nazwaUbran;
     }
 //rodzaj
 
@@ -49,6 +51,17 @@ public class ciuchyNaSprzedaz {
 
     public void setRozmiarUbran(String rozmiarUbran) {
         this.rozmiarUbran = rozmiarUbran;
+    }
+
+
+    //nazwa
+
+    public String getnazwaUbran(){
+        return nazwaUbran;
+    }
+
+    public void setNazwaUbran(String nazwaUbran) {
+        this.nazwaUbran = nazwaUbran;
     }
 }
 

@@ -3,13 +3,15 @@ public class ksiazkiNaSprzedaz {
     private Double cenaKsiazki;
     private Integer isbnKsiazki;
     private String autorKsiazki;
+    private  String nazwaKsiazki;
 
 
-    public ksiazkiNaSprzedaz(String rodzajKsiazki, Double cenaKsiazki, Integer isbnKsiazki, String autorKsiazki){
+    public ksiazkiNaSprzedaz(String rodzajKsiazki, Double cenaKsiazki, Integer isbnKsiazki, String autorKsiazki,  String nazwaKsiazki) {
         this.cenaKsiazki = cenaKsiazki;
         this.rodzajKsiazki = rodzajKsiazki;
         this.isbnKsiazki = isbnKsiazki;
         this.autorKsiazki = autorKsiazki;
+        this.nazwaKsiazki = nazwaKsiazki;
     }
     //rodzaj
 
@@ -50,4 +52,10 @@ public class ksiazkiNaSprzedaz {
     public void setIsbnKsiazki(Integer isbnKsiazki) {
         this.isbnKsiazki = isbnKsiazki;
     }
+
+    //nazwa
+
+    public String getNazwaKsiazki(){return nazwaKsiazki;}
+
+    public void setNazwaKsiazki(String nazwaKsiazki) {this.nazwaKsiazki = nazwaKsiazki;}
 }

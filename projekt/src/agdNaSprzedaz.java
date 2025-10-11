@@ -3,13 +3,15 @@ public class agdNaSprzedaz {
         private String rodzajAGD ;
         private Double cenaAGD;
         private String markaAGD;
+        private String nazwaAGD;
 
 
 
-        public agdNaSprzedaz(String markaAGD, Double cenaAGD, String rodzajAGD){
+        public agdNaSprzedaz(String markaAGD, Double cenaAGD, String rodzajAGD, String nazwaAGD) {
             this.cenaAGD = cenaAGD;
             this.rodzajAGD = rodzajAGD;
             this.markaAGD = markaAGD;
+            this.nazwaAGD = nazwaAGD;
         }
         //rodzaj
 
@@ -40,6 +42,16 @@ public class agdNaSprzedaz {
         public void setMarkaAGD(String markaAGD) {
             this.markaAGD = markaAGD;
         }
+
+    //nazwa
+
+    public String getNazwaAGD(){
+        return nazwaAGD;
+    }
+
+    public void setNazwaAGD(String nazwaAGD) {
+        this.nazwaAGD = nazwaAGD;
+    }
 
 
 }
