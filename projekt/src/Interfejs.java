@@ -134,103 +134,101 @@ public class Interfejs {
 
                 int wybor5 = sc5.nextInt();
 
-//                Scanner scPracownicy = new Scanner(System.in);
-//
-//                switch (wybor5) {
-//
-////                    !!!WYMAGA DODANIA NOWEGO ARRAY DO DATAMANAGER I ZMIANA PARU ZMIENNYCH W PONIŻSZYM KODZIE PO POWSTANIU KLASY HURTOWNICY!!!
-//
-//                    case 1:
-//                        System.out.println("Podaj imie Pracownika");
-//                        String imiePracownika = scPracownicy.nextLine();
-//                        System.out.println("Podaj nazwisko Pracownika");
-//                        String nazwiskoPracownika = scPracownicy.nextLine();
-//
-//                        if (!imiePracownika.isEmpty() && !nazwiskoPracownika.isEmpty()){
-//                                dataManager.listaPracownikow.add(new pracownicy(imiePracownika, nazwiskoPracownika));
-//                        }else {
-//                            System.out.println("Imie i Nazwisko pracownika nie moze byc puste");
-//                        }
-//
-//
-//
-//
-//                        break;
-//
-//                    case 2:
-//
-//                        System.out.println("Podaj imie Pracownika");
-//                        String imiePracownikaDoUsuniecia = scPracownicy.nextLine();
-//                        System.out.println("Podaj nazwe dostawcy");
-//                        String nazwiskoPracownikaDoUsuniecia = scPracownicy.nextLine();
-//
-//                        dataManager.listaPracownikow.removeIf(d -> Objects.equals(d.getImiePracownika(), imiePracownikaDoUsuniecia) && Objects.equals(d.getNazwiskoPracownika(), nazwiskoPracownikaDoUsuniecia));
-//
-//
-//                        break;
-//
-//                    case 3:
-//
-//                        System.out.println("Podaj imie Pracownika ktorego chcesz edytowac");
-//                        String imiePracownikaDoEdycji = scPracownicy.nextLine();
-//                        System.out.println("Podaj nazwisko Pracownika ktorego chcesz edytowac");
-//                        String nazwiskoPracownikaDoEdycji = scPracownicy.nextLine();
-//
-//                        Scanner scEdycjaPracownika = new Scanner(System.in);
-//
-//                        for (pracownicy p : dataManager.listaPracownikow){
-//                            if (Objects.equals(p.getImiePracownika(), imiePracownikaDoEdycji) && Objects.equals(p.getNazwiskoPracownika(), nazwiskoPracownikaDoEdycji)){
-//                                System.out.println("Co chcesz zmienic? Imie [1] Nazwisko [2]");
-//                                Integer wyborEdycjaPracownikow = scPracownicy.nextInt();
-//
-//                                if (wyborEdycjaPracownikow == 1){
-//                                    System.out.println("Podaj nowe imie");
-//                                    String noweImiePracownika = scEdycjaPracownika.nextLine();
-//
-//                                    if (!noweImiePracownika.isEmpty()){
-//                                        p.setImiePracownika(noweImiePracownika);
-//                                    } else {
-//                                        System.out.println("Imie nie moze byc puste");
-//                                    }
-//
-//
-//                                } else if (wyborEdycjaPracownikow == 2){
-//                                    System.out.println("Podaj nowe nazwisko");
-//                                    String noweNazwiskoPracownika = scEdycjaPracownika.nextLine();
-//
-//                                    if (!noweNazwiskoPracownika.isEmpty()){
-//                                        p.setNazwiskoPracownika(noweNazwiskoPracownika);
-//                                    } else {
-//                                        System.out.println("Nazwisko nie moze byc puste");
-//                                    }
-//
-//
-//
-//                                } else {
-//                                    System.out.println("nieprawidłowa opcja");
-//                                }
-//
-//                            }
-//                        }
-//
-//
-//                        break;
-//
-//                    case 4:
-//
-//                        for (pracownicy p : dataManager.listaPracownikow) {
-//                            System.out.println(p);
-//                        }
-//
-//                        break;
-//
-//                    case 5:
-//
-//                        break;
-//
-//
-//
-//                }
+                Scanner scHurtownicy = new Scanner(System.in);
+                Scanner scHurtownicy2 = new Scanner(System.in);
+
+                switch (wybor5) {
+
+//                    !!!WYMAGA DODANIA NOWEGO ARRAY DO DATAMANAGER I ZMIANA PARU ZMIENNYCH W PONIŻSZYM KODZIE PO POWSTANIU KLASY HURTOWNICY!!!
+
+                    case 1:
+                        System.out.println("Podaj nazwa Hurtownika");
+                        String nazwaHurtownika = scHurtownicy.nextLine();
+                        System.out.println("Podaj procent znizki hurtownika na hurt (Format: 00.00)");
+                        double procentZnizkiNaHurt = scHurtownicy2.nextDouble();
+
+                        if (!nazwaHurtownika.isEmpty() && procentZnizkiNaHurt >= 0 && procentZnizkiNaHurt <= 100){
+                                dataManager.listaHurtownikow.add(new hurtownicy(nazwaHurtownika, procentZnizkiNaHurt));
+                        }else {
+                            System.out.println("Pola nie moga byc puste");
+                        }
+
+
+
+
+                        break;
+
+                    case 2:
+
+                        System.out.println("Podaj nazwe hurtownika");
+                        String nazwaHurtownikaDoUsuniecia = scHurtownicy.nextLine();
+
+
+                        dataManager.listaHurtownikow.removeIf(h -> Objects.equals(h.getNazwaHurtownika(), nazwaHurtownikaDoUsuniecia));
+
+
+                        break;
+
+                    case 3:
+
+                        System.out.println("Podaj nazwe Hurtownika");
+                        String nazwaHurtownikaDoEdycji = scHurtownicy.nextLine();
+
+                        Scanner scEdycjaHurtownika = new Scanner(System.in);
+
+                        for (hurtownicy h : dataManager.listaHurtownikow){
+                            if (Objects.equals(h.getNazwaHurtownika(), nazwaHurtownikaDoEdycji)){
+                                System.out.println("Co chcesz zmienic? Nazwe [1] Procent Znizki [2]");
+                                Integer wyborEdycjaHurtownika = scHurtownicy.nextInt();
+
+                                if (wyborEdycjaHurtownika == 1){
+                                    System.out.println("Podaj nowa nazwe");
+                                    String nowaNazwaHurtownika = scEdycjaHurtownika.nextLine();
+
+                                    if (!nowaNazwaHurtownika.isEmpty()){
+                                        h.setNazwaHurtownika(nowaNazwaHurtownika);
+                                    } else {
+                                        System.out.println("Nazwa Hurtownika nie moze byc pusta");
+                                    }
+
+
+                                } else if (wyborEdycjaHurtownika == 2){
+                                    System.out.println("Podaj nowa znizke procentowa na hurt (Format: 00:00)");
+                                    double nowaZnizkaHurtownika = scEdycjaHurtownika.nextDouble();
+
+                                    if (nowaZnizkaHurtownika >= 0 && nowaZnizkaHurtownika <= 100){
+                                        h.setProcentZniznkiHurt(nowaZnizkaHurtownika);
+                                    } else {
+                                        System.out.println("Znizka nie moze byc pusta lub mniejsza od zera lub wieksza od 100");
+                                    }
+
+
+
+                                } else {
+                                    System.out.println("nieprawidłowa opcja");
+                                }
+
+                            }
+                        }
+
+
+                        break;
+
+                    case 4:
+
+                        for (hurtownicy h : dataManager.listaHurtownikow) {
+                            System.out.println(h);
+                        }
+
+                        break;
+
+                    case 5:
+
+                        break;
+
+
+
+                }
 
 
                 break;
