@@ -1,0 +1,33 @@
+agdNaSprzedaz [1] - 1
+ciuchyNaSprzedaz [2] - 1
+dostawcy [3] - 3
+historiaSprzedazy [4] - 2
+historiaTransakcji [5] - 2
+hurtownicy [6] - 3
+kodyZnizkowe [7] - 4
+koszyk [8] - 4
+ksiazkiNaSprzedaz [9] - 1
+magazyn [10] - 1
+pracownicy [11] - 3
+rtvNaSprzedaz [12] - 1
+shippingInfo [13] - 4
+zamowienia [14] - 4
+zwroty [15] - 4
+zakoncz [x]
+
+
+kategorie:
+1 - Zarzadzanie towarem
+2 - Archiwum
+3 - Hurtownicy, Dostawcy i Pracownicy
+4 - Zarzadzanie zamówieniami i sprzedażą
+
+Dodaj Produkt [1] Usun Produkt [2] Zmien Produkt [3] Wyswietl Produkty [4] Zakoncz [5]
+
+Dodaj Hurtownika [1] Usun Hurtownika [2] Zmien Hurtownika [3] Wyswietl Hurtownikow [4] Zakoncz [5]
+
+Kody Znizkowe [1] Koszyk [2] Shipping Info [3] Zamowienia [4] Zwroty [5] Zakoncz [6]
+
+
+
+
