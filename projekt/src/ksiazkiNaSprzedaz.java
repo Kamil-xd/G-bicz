@@ -6,6 +6,8 @@ public class ksiazkiNaSprzedaz {
     private  String nazwaKsiazki;
 
 
+
+
     public ksiazkiNaSprzedaz(String rodzajKsiazki, Double cenaKsiazki, Integer isbnKsiazki, String autorKsiazki,  String nazwaKsiazki) {
         this.cenaKsiazki = cenaKsiazki;
         this.rodzajKsiazki = rodzajKsiazki;

@@ -6,6 +6,7 @@ public class rtvNaSprzedaz {
 
 
 
+
     public rtvNaSprzedaz(String markaRTV, Double cenaRTV, String rodzajRTV,  String nazwaRTV) {
         this.cenaRTV = cenaRTV;
         this.rodzajRTV = rodzajRTV;

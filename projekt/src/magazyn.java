@@ -4,6 +4,7 @@ public class magazyn {
     private Integer iloscMagazyn;
 
 
+
     public magazyn(String nazwaMagazyn, Double cenaMagazyn, Integer iloscMagazyn) {
         this.nazwaMagazyn = nazwaMagazyn;
         this.cenaMagazyn = cenaMagazyn;

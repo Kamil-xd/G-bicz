@@ -7,6 +7,7 @@ public class agdNaSprzedaz {
 
 
 
+
         public agdNaSprzedaz(String markaAGD, Double cenaAGD, String rodzajAGD, String nazwaAGD) {
             this.cenaAGD = cenaAGD;
             this.rodzajAGD = rodzajAGD;

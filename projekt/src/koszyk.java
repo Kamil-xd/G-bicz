@@ -5,6 +5,7 @@ public class koszyk {
 
 
 
+
             public koszyk(String nazwaKoszyk, Double  cenaKoszyk, Integer iloscKoszyk){
                 this.nazwaKoszyk=nazwaKoszyk;
                 this.cenaKoszyk=cenaKoszyk;

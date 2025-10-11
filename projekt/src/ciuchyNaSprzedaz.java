@@ -6,6 +6,7 @@ public class ciuchyNaSprzedaz {
     private String nazwaUbran;
 
 
+
     public ciuchyNaSprzedaz(String rodzajUbran, Double cenaUbran, String rozmiarUbran, String kolorUbran, String nazwaUbran) {
         this.cenaUbran = cenaUbran;
         this.rozmiarUbran = rozmiarUbran;
