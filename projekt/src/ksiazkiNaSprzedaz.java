@@ -1,11 +1,11 @@
 public class ksiazkiNaSprzedaz {
     private String rodzajKsiazki ;
-    private Integer cenaKsiazki;
+    private Double cenaKsiazki;
     private Integer isbnKsiazki;
     private String autorKsiazki;
 
 
-    public ksiazkiNaSprzedaz(String rodzajKsiazki, Integer cenaKsiazki, Integer isbnKsiazki, String autorKsiazki){
+    public ksiazkiNaSprzedaz(String rodzajKsiazki, Double cenaKsiazki, Integer isbnKsiazki, String autorKsiazki){
         this.cenaKsiazki = cenaKsiazki;
         this.rodzajKsiazki = rodzajKsiazki;
         this.isbnKsiazki = isbnKsiazki;
@@ -21,11 +21,11 @@ public class ksiazkiNaSprzedaz {
     }
 
     //cena
-    public Integer getCenaKsiazki(){
+    public Double getCenaKsiazki(){
         return cenaKsiazki;
     }
 
-    public void setCenaKsiazki(Integer cenaKsiazki) {
+    public void setCenaKsiazki(Double cenaKsiazki) {
         this.cenaKsiazki = cenaKsiazki;
     }
 

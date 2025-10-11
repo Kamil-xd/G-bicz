@@ -1,11 +1,11 @@
 public class ciuchyNaSprzedaz {
     private String rodzajUbran ;
-    private Integer cenaUbran;
+    private Double cenaUbran;
     private String rozmiarUbran;
     private String kolorUbran;
 
 
-    public ciuchyNaSprzedaz(String rodzajUbran, Integer cenaUbran, String rozmiarUbran, String kolorUbran){
+    public ciuchyNaSprzedaz(String rodzajUbran, Double cenaUbran, String rozmiarUbran, String kolorUbran){
         this.cenaUbran = cenaUbran;
         this.rozmiarUbran = rozmiarUbran;
         this.rodzajUbran = rodzajUbran;
@@ -21,11 +21,11 @@ public class ciuchyNaSprzedaz {
     }
 
     //cena
-    public Integer getCenaUbran(){
+    public Double getCenaUbran(){
         return cenaUbran;
     }
 
-    public void setCenaUbran(Integer cenaUbran) {
+    public void setCenaUbran(Double cenaUbran) {
         this.cenaUbran = cenaUbran;
     }
 

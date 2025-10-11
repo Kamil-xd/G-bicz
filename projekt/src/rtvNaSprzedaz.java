@@ -1,11 +1,11 @@
 public class rtvNaSprzedaz {
     private String rodzajRTV ;
-    private Integer cenaRTV;
+    private Double cenaRTV;
     private String markaRTV;
 
 
 
-    public rtvNaSprzedaz(String markaRTV, Integer cenaRTV, String rodzajRTV){
+    public rtvNaSprzedaz(String markaRTV, Double cenaRTV, String rodzajRTV){
         this.cenaRTV = cenaRTV;
         this.rodzajRTV = rodzajRTV;
         this.markaRTV= markaRTV;
@@ -20,11 +20,11 @@ public class rtvNaSprzedaz {
     }
 
     //cena
-    public Integer getCenaRTV(){
+    public Double getCenaRTV(){
         return cenaRTV;
     }
 
-    public void setCenaRTV(Integer cenaRTV) {
+    public void setCenaRTV(Double cenaRTV) {
         this.cenaRTV = cenaRTV;
     }
 
