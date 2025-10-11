@@ -134,25 +134,22 @@ public class Interfejs {
 
                 int wybor5 = sc5.nextInt();
 
-                switch (wybor5) {
-
-//                    !!!WYMAGA DODANIA NOWEGO ARRAY DO DATAMANAGER I ZMIANA PARU ZMIENNYCH W PONIŻSZYM KODZIE PO POWSTANIU KLASY HURTOWNICY!!!
-
-//                    case 1:
-//                        System.out.println("Podaj nazwe dostawcy");
-//                        String nazwaDostawcy = scDostawcy.nextLine();
-//                        System.out.println("Podaj rodzaj towaru (agd, rtv, ciuchy, ksiazki)");
-//                        String rodzajTowaru = scDostawcy.nextLine();
+//                Scanner scPracownicy = new Scanner(System.in);
 //
-//                        if (!nazwaDostawcy.isEmpty()){
-//                            if (Objects.equals(rodzajTowaru, "agd") || Objects.equals(rodzajTowaru, "rtv") || Objects.equals(rodzajTowaru, "ciuchy") || Objects.equals(rodzajTowaru, "ksiazki")){
-////                                dostawcy nowyDostawca = new dostawcy(nazwaDostawcy, rodzajTowaru);
-//                                dataManager.listaDostawcow.add(new dostawcy(nazwaDostawcy, rodzajTowaru));
-//                            }else {
-//                                System.out.println("Zły rodzaj towaru");
-//                            }
+//                switch (wybor5) {
+//
+////                    !!!WYMAGA DODANIA NOWEGO ARRAY DO DATAMANAGER I ZMIANA PARU ZMIENNYCH W PONIŻSZYM KODZIE PO POWSTANIU KLASY HURTOWNICY!!!
+//
+//                    case 1:
+//                        System.out.println("Podaj imie Pracownika");
+//                        String imiePracownika = scPracownicy.nextLine();
+//                        System.out.println("Podaj nazwisko Pracownika");
+//                        String nazwiskoPracownika = scPracownicy.nextLine();
+//
+//                        if (!imiePracownika.isEmpty() && !nazwiskoPracownika.isEmpty()){
+//                                dataManager.listaPracownikow.add(new pracownicy(imiePracownika, nazwiskoPracownika));
 //                        }else {
-//                            System.out.println("Nazwa towaru nie moze byc pusta");
+//                            System.out.println("Imie i Nazwisko pracownika nie moze byc puste");
 //                        }
 //
 //
@@ -162,45 +159,49 @@ public class Interfejs {
 //
 //                    case 2:
 //
+//                        System.out.println("Podaj imie Pracownika");
+//                        String imiePracownikaDoUsuniecia = scPracownicy.nextLine();
 //                        System.out.println("Podaj nazwe dostawcy");
-//                        String nazwaDostawcyDoUsuniecia = scDostawcy.nextLine();
+//                        String nazwiskoPracownikaDoUsuniecia = scPracownicy.nextLine();
 //
-//                        dataManager.listaDostawcow.removeIf(d -> Objects.equals(d.getNazwaDostawcy(), nazwaDostawcyDoUsuniecia));
+//                        dataManager.listaPracownikow.removeIf(d -> Objects.equals(d.getImiePracownika(), imiePracownikaDoUsuniecia) && Objects.equals(d.getNazwiskoPracownika(), nazwiskoPracownikaDoUsuniecia));
 //
 //
 //                        break;
 //
 //                    case 3:
 //
-//                        System.out.println("Podaj nazwe dostawcy ktorego chcesz edytowac");
-//                        String nazwaDostawcyDoEdycji = scDostawcy.nextLine();
+//                        System.out.println("Podaj imie Pracownika ktorego chcesz edytowac");
+//                        String imiePracownikaDoEdycji = scPracownicy.nextLine();
+//                        System.out.println("Podaj nazwisko Pracownika ktorego chcesz edytowac");
+//                        String nazwiskoPracownikaDoEdycji = scPracownicy.nextLine();
 //
-//                        Scanner scEdycjaDostawcy = new Scanner(System.in);
+//                        Scanner scEdycjaPracownika = new Scanner(System.in);
 //
-//                        for (dostawcy d : dataManager.listaDostawcow){
-//                            if (Objects.equals(d.getNazwaDostawcy(), nazwaDostawcyDoEdycji)){
-//                                System.out.println("Co chcesz zmienic? Nazwe [1] Rodzaj Towaru [2]");
-//                                Integer wyborEdycjaDostawcow = scDostawcy.nextInt();
+//                        for (pracownicy p : dataManager.listaPracownikow){
+//                            if (Objects.equals(p.getImiePracownika(), imiePracownikaDoEdycji) && Objects.equals(p.getNazwiskoPracownika(), nazwiskoPracownikaDoEdycji)){
+//                                System.out.println("Co chcesz zmienic? Imie [1] Nazwisko [2]");
+//                                Integer wyborEdycjaPracownikow = scPracownicy.nextInt();
 //
-//                                if (wyborEdycjaDostawcow == 1){
-//                                    System.out.println("Podaj nazwe nowa");
-//                                    String nowaNawzaDostawcy = scEdycjaDostawcy.nextLine();
+//                                if (wyborEdycjaPracownikow == 1){
+//                                    System.out.println("Podaj nowe imie");
+//                                    String noweImiePracownika = scEdycjaPracownika.nextLine();
 //
-//                                    if (!nowaNawzaDostawcy.isEmpty()){
-//                                        d.setNazwaDostawcy(nowaNawzaDostawcy);
+//                                    if (!noweImiePracownika.isEmpty()){
+//                                        p.setImiePracownika(noweImiePracownika);
 //                                    } else {
-//                                        System.out.println("Nazwa nie moze byc pusta");
+//                                        System.out.println("Imie nie moze byc puste");
 //                                    }
 //
 //
-//                                } else if (wyborEdycjaDostawcow == 2) {
-//                                    System.out.println("Podaj towar nowy (agd, rtv, ciuchy, ksiazki)");
-//                                    String nowaTowarDostawcy = scEdycjaDostawcy.nextLine();
+//                                } else if (wyborEdycjaPracownikow == 2){
+//                                    System.out.println("Podaj nowe nazwisko");
+//                                    String noweNazwiskoPracownika = scEdycjaPracownika.nextLine();
 //
-//                                    if (Objects.equals(nowaTowarDostawcy, "agd") || Objects.equals(nowaTowarDostawcy, "rtv") || Objects.equals(nowaTowarDostawcy, "ciuchy") || Objects.equals(nowaTowarDostawcy, "ksiazki")){
-//                                        d.setRodzajTowaru(nowaTowarDostawcy);
+//                                    if (!noweNazwiskoPracownika.isEmpty()){
+//                                        p.setNazwiskoPracownika(noweNazwiskoPracownika);
 //                                    } else {
-//                                        System.out.println("nieprawidłowa nazwa towaru");
+//                                        System.out.println("Nazwisko nie moze byc puste");
 //                                    }
 //
 //
@@ -217,8 +218,8 @@ public class Interfejs {
 //
 //                    case 4:
 //
-//                        for (dostawcy d : dataManager.listaDostawcow) {
-//                            System.out.println(d);
+//                        for (pracownicy p : dataManager.listaPracownikow) {
+//                            System.out.println(p);
 //                        }
 //
 //                        break;
@@ -226,15 +227,10 @@ public class Interfejs {
 //                    case 5:
 //
 //                        break;
-
-
-
-                }
-
-
-
-
-
+//
+//
+//
+//                }
 
 
                 break;
@@ -254,25 +250,22 @@ public class Interfejs {
                 switch (wybor6) {
 
 
-
                     case 1:
                         System.out.println("Podaj nazwe dostawcy");
                         String nazwaDostawcy = scDostawcy.nextLine();
                         System.out.println("Podaj rodzaj towaru (agd, rtv, ciuchy, ksiazki)");
                         String rodzajTowaru = scDostawcy.nextLine();
 
-                        if (!nazwaDostawcy.isEmpty()){
-                            if (Objects.equals(rodzajTowaru, "agd") || Objects.equals(rodzajTowaru, "rtv") || Objects.equals(rodzajTowaru, "ciuchy") || Objects.equals(rodzajTowaru, "ksiazki")){
+                        if (!nazwaDostawcy.isEmpty()) {
+                            if (Objects.equals(rodzajTowaru, "agd") || Objects.equals(rodzajTowaru, "rtv") || Objects.equals(rodzajTowaru, "ciuchy") || Objects.equals(rodzajTowaru, "ksiazki")) {
 //                                dostawcy nowyDostawca = new dostawcy(nazwaDostawcy, rodzajTowaru);
                                 dataManager.listaDostawcow.add(new dostawcy(nazwaDostawcy, rodzajTowaru));
-                            }else {
+                            } else {
                                 System.out.println("Zły rodzaj towaru");
                             }
-                        }else {
+                        } else {
                             System.out.println("Nazwa towaru nie moze byc pusta");
                         }
-
-
 
 
                         break;
@@ -294,16 +287,16 @@ public class Interfejs {
 
                         Scanner scEdycjaDostawcy = new Scanner(System.in);
 
-                        for (dostawcy d : dataManager.listaDostawcow){
-                            if (Objects.equals(d.getNazwaDostawcy(), nazwaDostawcyDoEdycji)){
+                        for (dostawcy d : dataManager.listaDostawcow) {
+                            if (Objects.equals(d.getNazwaDostawcy(), nazwaDostawcyDoEdycji)) {
                                 System.out.println("Co chcesz zmienic? Nazwe [1] Rodzaj Towaru [2]");
                                 Integer wyborEdycjaDostawcow = scDostawcy.nextInt();
 
-                                if (wyborEdycjaDostawcow == 1){
+                                if (wyborEdycjaDostawcow == 1) {
                                     System.out.println("Podaj nazwe nowa");
                                     String nowaNawzaDostawcy = scEdycjaDostawcy.nextLine();
 
-                                    if (!nowaNawzaDostawcy.isEmpty()){
+                                    if (!nowaNawzaDostawcy.isEmpty()) {
                                         d.setNazwaDostawcy(nowaNawzaDostawcy);
                                     } else {
                                         System.out.println("Nazwa nie moze byc pusta");
@@ -314,12 +307,11 @@ public class Interfejs {
                                     System.out.println("Podaj towar nowy (agd, rtv, ciuchy, ksiazki)");
                                     String nowaTowarDostawcy = scEdycjaDostawcy.nextLine();
 
-                                    if (Objects.equals(nowaTowarDostawcy, "agd") || Objects.equals(nowaTowarDostawcy, "rtv") || Objects.equals(nowaTowarDostawcy, "ciuchy") || Objects.equals(nowaTowarDostawcy, "ksiazki")){
+                                    if (Objects.equals(nowaTowarDostawcy, "agd") || Objects.equals(nowaTowarDostawcy, "rtv") || Objects.equals(nowaTowarDostawcy, "ciuchy") || Objects.equals(nowaTowarDostawcy, "ksiazki")) {
                                         d.setRodzajTowaru(nowaTowarDostawcy);
                                     } else {
                                         System.out.println("nieprawidłowa nazwa towaru");
                                     }
-
 
 
                                 } else {
@@ -345,13 +337,7 @@ public class Interfejs {
                         break;
 
 
-
                 }
-
-
-
-
-
 
 
                 break;
@@ -364,113 +350,101 @@ public class Interfejs {
                 Scanner sc7 = new Scanner(System.in);
                 System.out.println("Dodaj Pracownika [1] Usun Pracownika [2] Zmien Pracownika [3] Wyswietl Pracownikow [4] Zakoncz [5]");
 
+                Scanner scPracownicy = new Scanner(System.in);
+
                 int wybor7 = sc7.nextInt();
 
                 switch (wybor7) {
 
-                    //                    !!!WYMAGA DODANIA NOWEGO ARRAY DO DATAMANAGER I ZMIANA PARU ZMIENNYCH W PONIŻSZYM KODZIE PO POWSTANIU KLASY HURTOWNICY!!!
+//                    !!!WYMAGA DODANIA NOWEGO ARRAY DO DATAMANAGER I ZMIANA PARU ZMIENNYCH W PONIŻSZYM KODZIE PO POWSTANIU KLASY HURTOWNICY!!!
 
-//                    case 1:
-//                        System.out.println("Podaj nazwe dostawcy");
-//                        String nazwaDostawcy = scDostawcy.nextLine();
-//                        System.out.println("Podaj rodzaj towaru (agd, rtv, ciuchy, ksiazki)");
-//                        String rodzajTowaru = scDostawcy.nextLine();
-//
-//                        if (!nazwaDostawcy.isEmpty()){
-//                            if (Objects.equals(rodzajTowaru, "agd") || Objects.equals(rodzajTowaru, "rtv") || Objects.equals(rodzajTowaru, "ciuchy") || Objects.equals(rodzajTowaru, "ksiazki")){
-////                                dostawcy nowyDostawca = new dostawcy(nazwaDostawcy, rodzajTowaru);
-//                                dataManager.listaDostawcow.add(new dostawcy(nazwaDostawcy, rodzajTowaru));
-//                            }else {
-//                                System.out.println("Zły rodzaj towaru");
-//                            }
-//                        }else {
-//                            System.out.println("Nazwa towaru nie moze byc pusta");
-//                        }
-//
-//
-//
-//
-//                        break;
-//
-//                    case 2:
-//
-//                        System.out.println("Podaj nazwe dostawcy");
-//                        String nazwaDostawcyDoUsuniecia = scDostawcy.nextLine();
-//
-//                        dataManager.listaDostawcow.removeIf(d -> Objects.equals(d.getNazwaDostawcy(), nazwaDostawcyDoUsuniecia));
-//
-//
-//                        break;
-//
-//                    case 3:
-//
-//                        System.out.println("Podaj nazwe dostawcy ktorego chcesz edytowac");
-//                        String nazwaDostawcyDoEdycji = scDostawcy.nextLine();
-//
-//                        Scanner scEdycjaDostawcy = new Scanner(System.in);
-//
-//                        for (dostawcy d : dataManager.listaDostawcow){
-//                            if (Objects.equals(d.getNazwaDostawcy(), nazwaDostawcyDoEdycji)){
-//                                System.out.println("Co chcesz zmienic? Nazwe [1] Rodzaj Towaru [2]");
-//                                Integer wyborEdycjaDostawcow = scDostawcy.nextInt();
-//
-//                                if (wyborEdycjaDostawcow == 1){
-//                                    System.out.println("Podaj nazwe nowa");
-//                                    String nowaNawzaDostawcy = scEdycjaDostawcy.nextLine();
-//
-//                                    if (!nowaNawzaDostawcy.isEmpty()){
-//                                        d.setNazwaDostawcy(nowaNawzaDostawcy);
-//                                    } else {
-//                                        System.out.println("Nazwa nie moze byc pusta");
-//                                    }
-//
-//
-//                                } else if (wyborEdycjaDostawcow == 2) {
-//                                    System.out.println("Podaj towar nowy (agd, rtv, ciuchy, ksiazki)");
-//                                    String nowaTowarDostawcy = scEdycjaDostawcy.nextLine();
-//
-//                                    if (Objects.equals(nowaTowarDostawcy, "agd") || Objects.equals(nowaTowarDostawcy, "rtv") || Objects.equals(nowaTowarDostawcy, "ciuchy") || Objects.equals(nowaTowarDostawcy, "ksiazki")){
-//                                        d.setRodzajTowaru(nowaTowarDostawcy);
-//                                    } else {
-//                                        System.out.println("nieprawidłowa nazwa towaru");
-//                                    }
-//
-//
-//
-//                                } else {
-//                                    System.out.println("nieprawidłowa opcja");
-//                                }
-//
-//                            }
-//                        }
-//
-//
-//                        break;
-//
-//                    case 4:
-//
-//                        for (dostawcy d : dataManager.listaDostawcow) {
-//                            System.out.println(d);
-//                        }
-//
-//                        break;
-//
-//                    case 5:
-//
-//                        break;
+                    case 1:
+                        System.out.println("Podaj imie Pracownika");
+                        String imiePracownika = scPracownicy.nextLine();
+                        System.out.println("Podaj nazwisko Pracownika");
+                        String nazwiskoPracownika = scPracownicy.nextLine();
 
+                        if (!imiePracownika.isEmpty() && !nazwiskoPracownika.isEmpty()) {
+                            dataManager.listaPracownikow.add(new pracownicy(imiePracownika, nazwiskoPracownika));
+                        } else {
+                            System.out.println("Imie i Nazwisko pracownika nie moze byc puste");
+                        }
+
+
+                        break;
+
+                    case 2:
+
+                        System.out.println("Podaj imie Pracownika");
+                        String imiePracownikaDoUsuniecia = scPracownicy.nextLine();
+                        System.out.println("Podaj nazwisko Pracownika");
+                        String nazwiskoPracownikaDoUsuniecia = scPracownicy.nextLine();
+
+                        dataManager.listaPracownikow.removeIf(d -> Objects.equals(d.getImiePracownika(), imiePracownikaDoUsuniecia) && Objects.equals(d.getNazwiskoPracownika(), nazwiskoPracownikaDoUsuniecia));
+
+
+                        break;
+
+                    case 3:
+
+                        System.out.println("Podaj imie Pracownika ktorego chcesz edytowac");
+                        String imiePracownikaDoEdycji = scPracownicy.nextLine();
+                        System.out.println("Podaj nazwisko Pracownika ktorego chcesz edytowac");
+                        String nazwiskoPracownikaDoEdycji = scPracownicy.nextLine();
+
+                        Scanner scEdycjaPracownika = new Scanner(System.in);
+
+                        for (pracownicy p : dataManager.listaPracownikow) {
+                            if (Objects.equals(p.getImiePracownika(), imiePracownikaDoEdycji) && Objects.equals(p.getNazwiskoPracownika(), nazwiskoPracownikaDoEdycji)) {
+                                System.out.println("Co chcesz zmienic? Imie [1] Nazwisko [2]");
+                                Integer wyborEdycjaPracownikow = scPracownicy.nextInt();
+
+                                if (wyborEdycjaPracownikow == 1) {
+                                    System.out.println("Podaj nowe imie");
+                                    String noweImiePracownika = scEdycjaPracownika.nextLine();
+
+                                    if (!noweImiePracownika.isEmpty()) {
+                                        p.setImiePracownika(noweImiePracownika);
+                                    } else {
+                                        System.out.println("Imie nie moze byc puste");
+                                    }
+
+
+                                } else if (wyborEdycjaPracownikow == 2) {
+                                    System.out.println("Podaj nowe nazwisko");
+                                    String noweNazwiskoPracownika = scEdycjaPracownika.nextLine();
+
+                                    if (!noweNazwiskoPracownika.isEmpty()) {
+                                        p.setNazwiskoPracownika(noweNazwiskoPracownika);
+                                    } else {
+                                        System.out.println("Nazwisko nie moze byc puste");
+                                    }
+
+
+                                } else {
+                                    System.out.println("nieprawidłowa opcja");
+                                }
+
+                            }
+                        }
+
+
+                        break;
+
+                    case 4:
+
+                        for (pracownicy p : dataManager.listaPracownikow) {
+                            System.out.println(p);
+                        }
+
+                        break;
+
+                    case 5:
+
+                        break;
 
 
                 }
-
-
-
-
-
-
-
-
-                break;
         }
 
 
