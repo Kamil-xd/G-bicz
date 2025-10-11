@@ -26,4 +26,9 @@ public class dostawcy {
     public void setRodzajTowaru(String rodzajTowaru) {
         this.rodzajTowaru = rodzajTowaru;
     }
+
+    @Override
+    public String toString() {
+        return "Nazwa: " + nazwaDostawcy + ", Towar: " + rodzajTowaru;
+    }
 }
