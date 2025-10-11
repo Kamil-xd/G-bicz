@@ -53,6 +53,7 @@ public class historiaSprzedaży {
     public void setProdukt(String produkt) {
         this.produkt = produkt;
     }
-    }
+
+}
 
 

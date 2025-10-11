@@ -47,4 +47,5 @@ public class historiaTransakcji {
     public void setProdukt(String produkt) {
         this.produkt = produkt;
     }
+
 }
