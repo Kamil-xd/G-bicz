@@ -4,6 +4,7 @@ public class dataManager {
         public static ArrayList<dostawcy> listaDostawcow = new ArrayList<>();
         public static ArrayList<pracownicy> listaPracownikow = new ArrayList<>();
         public static ArrayList<hurtownicy> listaHurtownikow = new ArrayList<>();
+        public static ArrayList<agdNaSprzedaz> listaAgdNaSprzedaz = new ArrayList<>();
 
 
 }
