@@ -42,6 +42,7 @@ public class Interfejs {
         System.out.println("Dodaj Produkt [1] Usun Produkt [2] Zmien Produkt [3] Wyswietl Produkty [4] Zakoncz [5]");
 
         int response2 = sc2.nextInt();
+        Scanner scWyborProdukty = new Scanner(System.in);
 
         switch (response2) {
 
@@ -49,7 +50,66 @@ public class Interfejs {
 
             case 1:
 
+                System.out.println("Wybierz kategorie: agd [1] ciuchy [2] ksiazki [3] zakoncz [4]");
 
+                switch (scWyborProdukty.nextInt()){
+
+                    case 1:
+
+                        System.out.println("Podaj następujące dane w tej kolejności: nazwa produktu, rodzaj (agd, rtv, ciuchy, ksiazki), cena, dostawca");
+
+                        String nazwaProduktu = scWyborProdukty.nextLine();
+                        String rodzaj = scWyborProdukty.nextLine();
+                        double cena = scWyborProdukty.nextDouble();
+                        String dostawca = scWyborProdukty.nextLine();
+
+                        switch (rodzaj){
+
+                            case "agd":
+                                agdNaSprzedaz noweAgdNaSprzedaz = new agdNaSprzedaz(nazwaProduktu, cena, dostawca)
+                                break;
+
+                            case "rtv":
+
+                                break;
+
+                            case "ciuchy":
+
+                                break;
+
+                            case "ksiazki":
+
+                                break;
+
+                            default:
+                                System.out.println("Nieprawidlowa opcja");
+                                break;
+
+
+
+
+                        }
+
+
+
+
+                        break;
+
+                    case 2:
+
+                        break;
+
+                    case 3:
+
+                        break;
+
+                    case 4:
+
+                        break;
+
+
+
+                }
 
                 break;
 
