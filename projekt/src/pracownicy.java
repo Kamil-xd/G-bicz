@@ -27,5 +27,10 @@ public class pracownicy {
         this.nazwiskoPracownika = nazwiskoPracownika;
     }
 
+    @Override
+    public String toString() {
+        return "Imie: " + imiePracownika + ", Nazwisko: " + nazwiskoPracownika;
+    }
+
 
 }
