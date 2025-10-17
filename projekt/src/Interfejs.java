@@ -56,12 +56,39 @@ public class Interfejs {
 
                     case 1:
 
-                        System.out.println("Podaj następujące dane w tej kolejności: nazwa produktu, rodzaj, cena, dostawca");
+                        System.out.println("Podaj następujące dane w tej kolejności: nazwa produktu, rodzaj (agd, rtv, ciuchy, ksiazki), cena, dostawca");
 
                         String nazwaProduktu = scWyborProdukty.nextLine();
                         String rodzaj = scWyborProdukty.nextLine();
                         double cena = scWyborProdukty.nextDouble();
                         String dostawca = scWyborProdukty.nextLine();
+
+                        switch (rodzaj){
+
+                            case "agd":
+                                agdNaSprzedaz noweAgdNaSprzedaz = new agdNaSprzedaz(nazwaProduktu, cena, dostawca)
+                                break;
+
+                            case "rtv":
+
+                                break;
+
+                            case "ciuchy":
+
+                                break;
+
+                            case "ksiazki":
+
+                                break;
+
+                            default:
+                                System.out.println("Nieprawidlowa opcja");
+                                break;
+
+
+
+
+                        }
 
 
 
