@@ -61,12 +61,26 @@ public class Interfejs {
                         String nazwaProduktu = scWyborProdukty.nextLine();
                         String rodzaj = scWyborProdukty.nextLine();
                         double cena = scWyborProdukty.nextDouble();
-                        String dostawca = scWyborProdukty.nextLine();
+                        String dostawcaDoWyszukania = scWyborProdukty.nextLine();
+                        String dostawca = "";
 
                         switch (rodzaj){
 
                             case "agd":
-                                agdNaSprzedaz noweAgdNaSprzedaz = new agdNaSprzedaz(nazwaProduktu, cena, dostawca)
+                                if (!nazwaProduktu.isEmpty()){
+                                    for (dostawcy d : dataManager.listaDostawcow){
+                                        if (d.equals(dostawcaDoWyszukania)) {
+                                            dostawca = d.getNazwaDostawcy();
+                                        }
+
+                                    }
+                                    agdNaSprzedaz noweAgdNaSprzedaz = new agdNaSprzedaz(nazwaProduktu, cena, dostawca);
+                                    dataManager.listaAgdNaSprzedaz.add(noweAgdNaSprzedaz);
+                                }
+
+
+
+
                                 break;
 
                             case "rtv":
@@ -104,6 +118,12 @@ public class Interfejs {
                         break;
 
                     case 4:
+
+                        for (agdNaSprzedaz a : dataManager.listaAgdNaSprzedaz){
+
+                        }
+
+
 
                         break;
 
