@@ -1,17 +1,21 @@
 public class ciuchyNaSprzedaz {
     private String rodzajUbran ;
-    private Integer cenaUbran;
+    private Double cenaUbran;
     private String rozmiarUbran;
     private String kolorUbran;
+    private String nazwaUbran;
 
 
-    public ciuchyNaSprzedaz(String rodzajUbran, Integer cenaUbran, String rozmiarUbran, String kolorUbran){
+
+    public ciuchyNaSprzedaz(String rodzajUbran, Double cenaUbran, String rozmiarUbran, String kolorUbran, String nazwaUbran) {
         this.cenaUbran = cenaUbran;
         this.rozmiarUbran = rozmiarUbran;
         this.rodzajUbran = rodzajUbran;
         this.kolorUbran = kolorUbran;
+        this.nazwaUbran = nazwaUbran;
     }
 //rodzaj
+
     public String getRodzajUbran(){
         return rodzajUbran;
     }
@@ -21,15 +25,17 @@ public class ciuchyNaSprzedaz {
     }
 
     //cena
-    public Integer getCenaUbran(){
+
+    public Double getCenaUbran(){
         return cenaUbran;
     }
 
-    public void setCenaUbran(Integer cenaUbran) {
+    public void setCenaUbran(Double cenaUbran) {
         this.cenaUbran = cenaUbran;
     }
 
     //kolor
+
     public String getKolorUbran(){
         return kolorUbran;
     }
@@ -39,12 +45,24 @@ public class ciuchyNaSprzedaz {
     }
 
     //rozmiar
+
     public String getRozmiarUbran(){
         return rozmiarUbran;
     }
 
     public void setRozmiarUbran(String rozmiarUbran) {
         this.rozmiarUbran = rozmiarUbran;
+    }
+
+
+    //nazwa
+
+    public String getnazwaUbran(){
+        return nazwaUbran;
+    }
+
+    public void setNazwaUbran(String nazwaUbran) {
+        this.nazwaUbran = nazwaUbran;
     }
 }
 
