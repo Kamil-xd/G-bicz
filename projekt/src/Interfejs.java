@@ -171,17 +171,17 @@ public class Interfejs {
 
         switch (response3) {
 
-            /*Wyswietl historie sprzedazy*/
+
 
             case 1:
-
+                System.out.println(historiaDzialan.historiaSprzedazy);
                 break;
 
             /*Wyswietl historie transakcji*/
 
 
             case 2:
-
+                System.out.println(historiaDzialan.historiaTransakcji);
                 break;
 
             /*Zakoncz*/
