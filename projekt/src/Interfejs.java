@@ -175,6 +175,7 @@ public class Interfejs {
 
             case 1:
                 System.out.println(historiaDzialan.historiaSprzedazy);
+
                 break;
 
             /*Wyswietl historie transakcji*/
@@ -182,6 +183,7 @@ public class Interfejs {
 
             case 2:
                 System.out.println(historiaDzialan.historiaTransakcji);
+
                 break;
 
             /*Zakoncz*/
