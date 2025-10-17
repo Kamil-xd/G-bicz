@@ -22,9 +22,7 @@ public class Interfejs {
                 hurtownicyDostawcyPracownicy();
                 break;
 
-            case 4:
-                zarzadzanieZamowieniamiSprzedaza();
-                break;
+
 
 
 
@@ -537,62 +535,9 @@ public class Interfejs {
         return "";
     }
 
-    public String zarzadzanieZamowieniamiSprzedaza(){
-        Scanner sc8 = new Scanner(System.in);
-
-        System.out.println("Podaj co chcesz zrobic dalej");
-        System.out.println("Kody Znizkowe [1] Koszyk [2] Shipping Info [3] Zamowienia [4] Zwroty [5] Zakoncz [6]");
-
-        int response8 = sc8.nextInt();
-
-        switch (response8) {
-
-            /*Kody Znizkowe*/
-
-            case 1:
-
-                break;
-
-            /*Koszyk*/
-
-
-            case 2:
-
-                break;
-
-            /*Shipping Info*/
-
-            case 3:
-
-                break;
-
-            /*Zamowienia*/
-
-            case 4:
-
-                break;
-
-            /*Zwroty*/
-
-            case 5:
-
-                break;
-
-            /*Zakonczy*/
-
-            case 6:
-
-                break;
-        }
-
-
-
-        return "";
-    }
-
-
 
     }
+
 
 
 

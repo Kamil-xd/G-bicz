@@ -13,7 +13,7 @@ public class Main {
 
             System.out.println("Co chcesz zrobic");
             System.out.println("Podkategorie:");
-            System.out.println("Zarządzanie Towarem [1] Archiwum [2] Hurtownicy, Dostawcy i Pracownicy [3] Zarządzanie zamówieniami i sprzedażą [4] zakończ [5] ");
+            System.out.println("Zarządzanie Towarem [1] Archiwum [2] Hurtownicy, Dostawcy i Pracownicy [3]  zakończ [5] ");
 
             Scanner sc = new Scanner(System.in);
             int wybor = sc.nextInt();
