@@ -22,9 +22,7 @@ public class Interfejs {
                 hurtownicyDostawcyPracownicy();
                 break;
 
-            case 4:
-                zarzadzanieZamowieniamiSprzedaza();
-                break;
+
 
 
 
@@ -42,6 +40,7 @@ public class Interfejs {
         System.out.println("Dodaj Produkt [1] Usun Produkt [2] Zmien Produkt [3] Wyswietl Produkty [4] Zakoncz [5]");
 
         int response2 = sc2.nextInt();
+        Scanner scWyborProdukty = new Scanner(System.in);
 
         switch (response2) {
 
@@ -49,7 +48,86 @@ public class Interfejs {
 
             case 1:
 
+                System.out.println("Wybierz kategorie: agd [1] ciuchy [2] ksiazki [3] zakoncz [4]");
 
+                switch (scWyborProdukty.nextInt()){
+
+                    case 1:
+
+                        System.out.println("Podaj następujące dane w tej kolejności: nazwa produktu, rodzaj (agd, rtv, ciuchy, ksiazki), cena, dostawca");
+
+                        String nazwaProduktu = scWyborProdukty.nextLine();
+                        String rodzaj = scWyborProdukty.nextLine();
+                        double cena = scWyborProdukty.nextDouble();
+                        String dostawcaDoWyszukania = scWyborProdukty.nextLine();
+                        String dostawca = "";
+
+                        switch (rodzaj){
+
+                            case "agd":
+                                if (!nazwaProduktu.isEmpty()){
+                                    for (dostawcy d : dataManager.listaDostawcow){
+                                        if (d.equals(dostawcaDoWyszukania)) {
+                                            dostawca = d.getNazwaDostawcy();
+                                        }
+
+                                    }
+                                    agdNaSprzedaz noweAgdNaSprzedaz = new agdNaSprzedaz(nazwaProduktu, cena, dostawca);
+                                    dataManager.listaAgdNaSprzedaz.add(noweAgdNaSprzedaz);
+                                }
+
+
+
+
+                                break;
+
+                            case "rtv":
+
+                                break;
+
+                            case "ciuchy":
+
+                                break;
+
+                            case "ksiazki":
+
+                                break;
+
+                            default:
+                                System.out.println("Nieprawidlowa opcja");
+                                break;
+
+
+
+
+                        }
+
+
+
+
+                        break;
+
+                    case 2:
+
+                        break;
+
+                    case 3:
+
+                        break;
+
+                    case 4:
+
+                        for (agdNaSprzedaz a : dataManager.listaAgdNaSprzedaz){
+
+                        }
+
+
+
+                        break;
+
+
+
+                }
 
                 break;
 
@@ -457,62 +535,9 @@ public class Interfejs {
         return "";
     }
 
-    public String zarzadzanieZamowieniamiSprzedaza(){
-        Scanner sc8 = new Scanner(System.in);
-
-        System.out.println("Podaj co chcesz zrobic dalej");
-        System.out.println("Kody Znizkowe [1] Koszyk [2] Shipping Info [3] Zamowienia [4] Zwroty [5] Zakoncz [6]");
-
-        int response8 = sc8.nextInt();
-
-        switch (response8) {
-
-            /*Kody Znizkowe*/
-
-            case 1:
-
-                break;
-
-            /*Koszyk*/
-
-
-            case 2:
-
-                break;
-
-            /*Shipping Info*/
-
-            case 3:
-
-                break;
-
-            /*Zamowienia*/
-
-            case 4:
-
-                break;
-
-            /*Zwroty*/
-
-            case 5:
-
-                break;
-
-            /*Zakonczy*/
-
-            case 6:
-
-                break;
-        }
-
-
-
-        return "";
-    }
-
-
 
     }
+
 
 
 

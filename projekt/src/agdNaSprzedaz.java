@@ -1,58 +1,50 @@
 public class agdNaSprzedaz {
-
-        private String rodzajAGD ;
-        private Double cenaAGD;
-        private String markaAGD;
-        private String nazwaAGD;
+    private String nazwaProduktu;
+    private double cenaAgd;
+    private String dostawca;
 
 
+    public agdNaSprzedaz(String nazwaProduktu, double cenaAgd, String dostawca) {
+        this.nazwaProduktu = nazwaProduktu;
+        this.cenaAgd = cenaAgd;
+        this.dostawca = dostawca;
 
 
-        public agdNaSprzedaz(String markaAGD, Double cenaAGD, String rodzajAGD, String nazwaAGD) {
-            this.cenaAGD = cenaAGD;
-            this.rodzajAGD = rodzajAGD;
-            this.markaAGD = markaAGD;
-            this.nazwaAGD = nazwaAGD;
-        }
-        //rodzaj
-
-        public String getRodzajAGD(){
-            return rodzajAGD;
-        }
-
-        public void setRodzajAGD(String rodzajAGD) {
-            this.rodzajAGD = rodzajAGD;
-        }
-
-        //cena
-
-        public Double getCenaAGD(){
-            return cenaAGD;
-        }
-
-        public void setCenaAGD(Double cenaAGD) {
-            this.cenaAGD = cenaAGD;
-        }
-
-        //marka
-
-        public String getMarkaAGD(){
-            return markaAGD;
-        }
-
-        public void setMarkaAGD(String markaAGD) {
-            this.markaAGD = markaAGD;
-        }
-
-    //nazwa
-
-    public String getNazwaAGD(){
-        return nazwaAGD;
     }
 
-    public void setNazwaAGD(String nazwaAGD) {
-        this.nazwaAGD = nazwaAGD;
+    public String getDostawca() {
+        return dostawca;
     }
+
+    public double getCenaAgd() {
+        return cenaAgd;
+    }
+
+    public String getNazwaProduktu() {
+        return nazwaProduktu;
+    }
+
+
+    public void setCenaAgd(Integer cenaAgd) {
+        this.cenaAgd = cenaAgd;
+    }
+
+    public void setDostawca(String dostawca) {
+        this.dostawca = dostawca;
+    }
+
+    public void setNazwaProduktu(String nazwaProduktu) {
+        this.nazwaProduktu = nazwaProduktu;
+    }
+
+    @Override
+    public String toString() {
+        return "Nazwa: " + nazwaProduktu + ", Cena " + cenaAgd + ", Dostawca " + dostawca;
+    }
+
 
 
 }
+
+
+
