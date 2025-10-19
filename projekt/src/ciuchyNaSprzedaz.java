@@ -64,5 +64,12 @@ public class ciuchyNaSprzedaz {
     public void setNazwaUbran(String nazwaUbran) {
         this.nazwaUbran = nazwaUbran;
     }
+
+
+    @Override
+    public String toString() {
+        return "Nazwa: " + nazwaUbran + ", Cena " + cenaUbran + ", rodzaj " + rodzajUbran + ", kolor " + kolorUbran  + ", rozmiar " + rozmiarUbran;
+    }
 }
+
 

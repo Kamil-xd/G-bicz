@@ -49,4 +49,11 @@ public class rtvNaSprzedaz {
 
     public void setNazwaRTV(String nazwaRTV) {this.nazwaRTV = nazwaRTV;}
 
+
+
+
+    @Override
+    public String toString() {
+        return "Nazwa: " + nazwaRTV + ", marka: " + markaRTV + ", rodzaj: " + rodzajRTV + ", cena: " + cenaRTV;
+    }
 }
