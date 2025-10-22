@@ -60,4 +60,10 @@ public class ksiazkiNaSprzedaz {
     public String getNazwaKsiazki(){return nazwaKsiazki;}
 
     public void setNazwaKsiazki(String nazwaKsiazki) {this.nazwaKsiazki = nazwaKsiazki;}
+
+
+    @Override
+    public String toString() {
+        return ", nazwa" + nazwaKsiazki + ", autor" + autorKsiazki + ", isbn" + isbnKsiazki + ", rodzaj" + rodzajKsiazki + ", cenaKsiazki" + cenaKsiazki;
+    }
 }

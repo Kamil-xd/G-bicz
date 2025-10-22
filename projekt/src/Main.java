@@ -7,10 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        boolean petla = true;
 
-        while (petla){
 
+        while (dataManager.petla) {
             System.out.println("Co chcesz zrobic");
             System.out.println("Podkategorie:");
             System.out.println("Zarządzanie Towarem [1] Archiwum [2] Hurtownicy, Dostawcy i Pracownicy [3]  zakończ [5] ");
