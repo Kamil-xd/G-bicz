@@ -52,14 +52,34 @@ public class Interfejs {
 
                 System.out.println("Wybierz kategorie: agd [1] ciuchy [2] ksiazki [3] powrót [4]");
 
-                switch (scWyborProdukty.nextInt()){
+                int wybor = scWyborProdukty.nextInt();
+
+
+
+                switch (wybor){
 
                     case 1:
 
                         System.out.println("Podaj następujące dane w tej kolejności: nazwa produktu, rodzaj (agd, rtv, ciuchy, ksiazki), cena, dostawca");
 
                         String nazwaProduktu = scWyborProdukty.nextLine();
-                        String rodzaj = scWyborProdukty.nextLine();
+                        String rodzaj = "";
+
+                        switch (wybor){
+                            case 1:
+                                rodzaj = "agd";
+                                break;
+                            case 2:
+                                rodzaj = "rtv";
+                                break;
+                            case 3:
+                                rodzaj = "ciuchy";
+                                break;
+                            case 4:
+                                rodzaj = "ksiazki";
+                                break;
+                        }
+
                         double cena = scWyborProdukty.nextDouble();
                         String dostawcaDoWyszukania = scWyborProdukty.nextLine();
                         String dostawca = "";
@@ -87,10 +107,31 @@ public class Interfejs {
                                 break;
 
                             case "rtv":
+                                if (!nazwaProduktu.isEmpty()) {
+                                    for (dostawcy d : dataManager.listaDostawcow) {
+                                        if (d.equals(dostawcaDoWyszukania)) {
+                                            dostawca = d.getNazwaDostawcy();
+                                        }
 
+                                    }
+                                    rtvNaSprzedaz noweRtvNaSprzedaz = new rtvNaSprzedaz(nazwaProduktu, cena, dostawca);
+                                    dataManager.listaRtvNaSprzedaz.add(noweRtvNaSprzedaz);
+                                    historiaDzialan.historiaDzialan.add("Dodano Produkt: \n" + "nazwaProduktu: " + nazwaProduktu + "\n rodzaj: " + rodzaj + "\n cena: " + cena + "\n dostawca: " + dostawca);
+                                }
                                 break;
 
                             case "ciuchy":
+                                if (!nazwaProduktu.isEmpty()) {
+                                    for (dostawcy d : dataManager.listaDostawcow) {
+                                        if (d.equals(dostawcaDoWyszukania)) {
+                                            dostawca = d.getNazwaDostawcy();
+                                        }
+
+                                    }
+                                    ciuchyNaSprzedaz noweCiuchyNaSprzedaz = new ciuchyNaSprzedaz(nazwaProduktu, cena, dostawca);
+                                    dataManager.listCiuchowNaSprzedaz.add(noweCiuchyNaSprzedaz);
+                                    historiaDzialan.historiaDzialan.add("Dodano Produkt: \n" + "nazwaProduktu: " + nazwaProduktu + "\n rodzaj: " + rodzaj + "\n cena: " + cena + "\n dostawca: " + dostawca);
+                                }
 
                                 break;
 
@@ -106,6 +147,7 @@ public class Interfejs {
 
 
                         }
+
 
 
 

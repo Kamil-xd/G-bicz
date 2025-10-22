@@ -1,59 +1,49 @@
 public class rtvNaSprzedaz {
-    private String rodzajRTV ;
-    private Double cenaRTV;
-    private String markaRTV;
-    private String nazwaRTV;
+    private String nazwaProduktu;
+    private double cenaRtv;
+    private String dostawca;
 
 
+    public rtvNaSprzedaz(String nazwaProduktu, double cenaRtv, String dostawca) {
+        this.nazwaProduktu = nazwaProduktu;
+        this.cenaRtv = cenaRtv;
+        this.dostawca = dostawca;
 
 
-    public rtvNaSprzedaz(String markaRTV, Double cenaRTV, String rodzajRTV,  String nazwaRTV) {
-        this.cenaRTV = cenaRTV;
-        this.rodzajRTV = rodzajRTV;
-        this.markaRTV= markaRTV;
-        this.nazwaRTV = nazwaRTV;
-    }
-    //rodzaj
-
-    public String getRodzajRTV(){
-        return rodzajRTV;
     }
 
-    public void setRodzajRTV(String rodzajRTV) {
-        this.rodzajRTV = rodzajRTV;
+    public double getCenaRtv() {
+        return cenaRtv;
     }
 
-    //cena
-
-    public Double getCenaRTV(){
-        return cenaRTV;
+    public String getDostawca() {
+        return dostawca;
     }
 
-    public void setCenaRTV(Double cenaRTV) {
-        this.cenaRTV = cenaRTV;
+    public String getNazwaProduktu() {
+        return nazwaProduktu;
     }
 
-    //marka
-
-    public String getMarkaRTV(){
-        return markaRTV;
+    public void setCenaRtv(double cenaRtv) {
+        this.cenaRtv = cenaRtv;
     }
 
-    public void setMarkaRTV(String markaRTV) {
-        this.markaRTV = markaRTV;
+    public void setDostawca(String dostawca) {
+        this.dostawca = dostawca;
     }
 
-    //nazwa
-
-    public String getNazwaRTV(){return nazwaRTV;}
-
-    public void setNazwaRTV(String nazwaRTV) {this.nazwaRTV = nazwaRTV;}
-
-
-
+    public void setNazwaProduktu(String nazwaProduktu) {
+        this.nazwaProduktu = nazwaProduktu;
+    }
 
     @Override
     public String toString() {
-        return "Nazwa: " + nazwaRTV + ", marka: " + markaRTV + ", rodzaj: " + rodzajRTV + ", cena: " + cenaRTV;
+        return "Nazwa: " + nazwaProduktu + ", Cena " + cenaRtv + ", Dostawca " + dostawca;
     }
+
+
+
 }
+
+
+
