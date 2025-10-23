@@ -1,10 +1,10 @@
 public class rtvNaSprzedaz {
     private String nazwaProduktu;
     private double cenaRtv;
-    private String dostawca;
+    private dostawcy dostawca;
 
 
-    public rtvNaSprzedaz(String nazwaProduktu, double cenaRtv, String dostawca) {
+    public rtvNaSprzedaz(String nazwaProduktu, double cenaRtv, dostawcy dostawca) {
         this.nazwaProduktu = nazwaProduktu;
         this.cenaRtv = cenaRtv;
         this.dostawca = dostawca;
@@ -16,7 +16,7 @@ public class rtvNaSprzedaz {
         return cenaRtv;
     }
 
-    public String getDostawca() {
+    public dostawcy getDostawca() {
         return dostawca;
     }
 
@@ -28,7 +28,7 @@ public class rtvNaSprzedaz {
         this.cenaRtv = cenaRtv;
     }
 
-    public void setDostawca(String dostawca) {
+    public void setDostawca(dostawcy dostawca) {
         this.dostawca = dostawca;
     }
 

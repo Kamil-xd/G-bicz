@@ -1,11 +1,11 @@
 public class ciuchyNaSprzedaz {
     private String nazwaProduktu;
     private double cenaCiuchu;
-    private String dostawca;
+    private dostawcy dostawca;
 
 
 
-    public ciuchyNaSprzedaz(String nazwaProduktu, Double cenaCiuchu, String dostawca ) {
+    public ciuchyNaSprzedaz(String nazwaProduktu, Double cenaCiuchu, dostawcy dostawca ) {
         this.nazwaProduktu = nazwaProduktu;
         this.cenaCiuchu = cenaCiuchu;
         this.dostawca = dostawca;
@@ -13,7 +13,7 @@ public class ciuchyNaSprzedaz {
 //rodzaj
 
 
-    public String getDostawca() {
+    public dostawcy getDostawca() {
         return dostawca;
     }
 
@@ -29,7 +29,7 @@ public class ciuchyNaSprzedaz {
         this.nazwaProduktu = nazwaProduktu;
     }
 
-    public void setDostawca(String dostawca) {
+    public void setDostawca(dostawcy dostawca) {
         this.dostawca = dostawca;
     }
 

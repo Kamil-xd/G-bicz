@@ -44,168 +44,101 @@ public class Interfejs {
         int response2 = sc2.nextInt();
         Scanner scWyborProdukty = new Scanner(System.in);
 
+
         switch (response2) {
 
             /*Dodaj Produkt*/
 
             case 1:
 
-                System.out.println("Wybierz kategorie: agd [1] ciuchy [2] ksiazki [3] powrót [4]");
+
+                System.out.println("Wybierz kategorie: agd [1] rtv [2] ciuchy [3] ksiazki [4] powrót [4]");
 
                 int wybor = scWyborProdukty.nextInt();
+                String rodzaj = "";
 
-
-
-                switch (wybor){
-
+                switch (wybor) {
                     case 1:
-
-                        System.out.println("Podaj następujące dane w tej kolejności: nazwa produktu, rodzaj (agd, rtv, ciuchy, ksiazki), cena, dostawca");
-
-                        String nazwaProduktu = scWyborProdukty.nextLine();
-                        String rodzaj = "";
-
-                        switch (wybor){
-                            case 1:
-                                rodzaj = "agd";
-                                break;
-                            case 2:
-                                rodzaj = "rtv";
-                                break;
-                            case 3:
-                                rodzaj = "ciuchy";
-                                break;
-                            case 4:
-                                rodzaj = "ksiazki";
-                                break;
-                        }
-
-                        double cena = scWyborProdukty.nextDouble();
-                        String dostawcaDoWyszukania = scWyborProdukty.nextLine();
-                        String dostawca = "";
-
-
-
-                        switch (rodzaj){
-
-                            case "agd":
-                                if (!nazwaProduktu.isEmpty()){
-                                    for (dostawcy d : dataManager.listaDostawcow){
-                                        if (d.equals(dostawcaDoWyszukania)) {
-                                            dostawca = d.getNazwaDostawcy();
-                                        }
-
-                                    }
-                                    agdNaSprzedaz noweAgdNaSprzedaz = new agdNaSprzedaz(nazwaProduktu, cena, dostawca);
-                                    dataManager.listaAgdNaSprzedaz.add(noweAgdNaSprzedaz);
-                                    historiaDzialan.historiaDzialan.add("Dodano Produkt: \n" +"nazwaProduktu: "+nazwaProduktu+"\n rodzaj: "+rodzaj+"\n cena: "+cena+"\n dostawca: "+dostawca);
-                                }
-
-
-
-
-                                break;
-
-                            case "rtv":
-                                if (!nazwaProduktu.isEmpty()) {
-                                    for (dostawcy d : dataManager.listaDostawcow) {
-                                        if (d.equals(dostawcaDoWyszukania)) {
-                                            dostawca = d.getNazwaDostawcy();
-                                        }
-
-                                    }
-                                    rtvNaSprzedaz noweRtvNaSprzedaz = new rtvNaSprzedaz(nazwaProduktu, cena, dostawca);
-                                    dataManager.listaRtvNaSprzedaz.add(noweRtvNaSprzedaz);
-                                    historiaDzialan.historiaDzialan.add("Dodano Produkt: \n" + "nazwaProduktu: " + nazwaProduktu + "\n rodzaj: " + rodzaj + "\n cena: " + cena + "\n dostawca: " + dostawca);
-                                }
-                                break;
-
-                            case "ciuchy":
-                                if (!nazwaProduktu.isEmpty()) {
-                                    for (dostawcy d : dataManager.listaDostawcow) {
-                                        if (d.equals(dostawcaDoWyszukania)) {
-                                            dostawca = d.getNazwaDostawcy();
-                                        }
-
-                                    }
-                                    ciuchyNaSprzedaz noweCiuchyNaSprzedaz = new ciuchyNaSprzedaz(nazwaProduktu, cena, dostawca);
-                                    dataManager.listCiuchowNaSprzedaz.add(noweCiuchyNaSprzedaz);
-                                    historiaDzialan.historiaDzialan.add("Dodano Produkt: \n" + "nazwaProduktu: " + nazwaProduktu + "\n rodzaj: " + rodzaj + "\n cena: " + cena + "\n dostawca: " + dostawca);
-                                }
-
-                                break;
-
-                            case "ksiazki":
-
-                                break;
-
-                            default:
-                                System.out.println("Nieprawidlowa opcja");
-                                break;
-
-
-
-
-                        }
-
-
-
-
-
+                        rodzaj = "agd";
                         break;
-
                     case 2:
-
+                        rodzaj = "rtv";
                         break;
-
                     case 3:
-
+                        rodzaj = "ciuchy";
                         break;
-
                     case 4:
-
-                        for (agdNaSprzedaz a : dataManager.listaAgdNaSprzedaz){
-
-                        }
-
-
-
+                        rodzaj = "ksiazki";
                         break;
-
+                    default:
+                        System.out.println("Nieprawidlowa opcja");
+                        break;
 
 
                 }
 
-                break;
 
-            /*Usun Produkt*/
+                System.out.println("Podaj następujące dane w tej kolejności: nazwa produktu, cena, dostawca");
+
+                String nazwaProduktu = scWyborProdukty.nextLine();
+                Scanner scWyborProduktyDouble = new Scanner(System.in);
+                double cenaProduktu = scWyborProduktyDouble.nextDouble();
+                String dostawcaDoWyszukania = scWyborProdukty.nextLine();
+                dostawcy dostawca = null;
+
+                for (dostawcy d : dataManager.listaDostawcow){
+                    if (dostawcaDoWyszukania.equals(d.getNazwaDostawcy())){
+                        dostawca = d;
+
+                    }
+                }
+
+
+
+                if (rodzaj.equals("agd")){
+                    dataManager.listaAgdNaSprzedaz.add(new agdNaSprzedaz(nazwaProduktu, cenaProduktu, dostawca));
+                }else if (rodzaj.equals("rtv")){
+                    dataManager.listaRtvNaSprzedaz.add(new rtvNaSprzedaz(nazwaProduktu, cenaProduktu, dostawca));
+
+                }else if (rodzaj.equals("ciuchy")){
+                    dataManager.listaCiuchowNaSprzedaz.add(new ciuchyNaSprzedaz(nazwaProduktu, cenaProduktu, dostawca));
+                } else if (rodzaj.equals("ksiazki")) {
+                    dataManager.listaKsiazekNaSprzedaz.add(new ksiazkiNaSprzedaz(nazwaProduktu, cenaProduktu, dostawca));
+                }else {
+                    System.out.println("Nieprawidlowy dostawca");
+                }
 
 
             case 2:
 
                 break;
 
-            /*Zmien Produkt*/
-
             case 3:
 
                 break;
-
-            /*Wyswietl Produkty*/
 
             case 4:
 
                 break;
 
-            /*Zakoncz*/
-
             case 5:
 
                 break;
 
+
+
         }
+
+        double cena = scWyborProdukty.nextDouble();
+        String dostawcaDoWyszukania = scWyborProdukty.nextLine();
+        String dostawca = "";
         return "";
     }
+
+
+
+
+
 
     public String archiwum() {
 
