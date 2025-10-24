@@ -1,68 +1,46 @@
 public class ciuchyNaSprzedaz {
-    private String rodzajUbran ;
-    private Double cenaUbran;
-    private String rozmiarUbran;
-    private String kolorUbran;
-    private String nazwaUbran;
+    private String nazwaProduktu;
+    private double cenaCiuchu;
+    private dostawcy dostawca;
 
 
 
-    public ciuchyNaSprzedaz(String rodzajUbran, Double cenaUbran, String rozmiarUbran, String kolorUbran, String nazwaUbran) {
-        this.cenaUbran = cenaUbran;
-        this.rozmiarUbran = rozmiarUbran;
-        this.rodzajUbran = rodzajUbran;
-        this.kolorUbran = kolorUbran;
-        this.nazwaUbran = nazwaUbran;
+    public ciuchyNaSprzedaz(String nazwaProduktu, Double cenaCiuchu, dostawcy dostawca ) {
+        this.nazwaProduktu = nazwaProduktu;
+        this.cenaCiuchu = cenaCiuchu;
+        this.dostawca = dostawca;
     }
 //rodzaj
 
-    public String getRodzajUbran(){
-        return rodzajUbran;
+
+    public dostawcy getDostawca() {
+        return dostawca;
     }
 
-    public void setRodzajUbran(String rodzajUbran) {
-        this.rodzajUbran = rodzajUbran;
+    public String getNazwaProduktu() {
+        return nazwaProduktu;
     }
 
-    //cena
-
-    public Double getCenaUbran(){
-        return cenaUbran;
+    public double getCenaCiuchu() {
+        return cenaCiuchu;
     }
 
-    public void setCenaUbran(Double cenaUbran) {
-        this.cenaUbran = cenaUbran;
+    public void setNazwaProduktu(String nazwaProduktu) {
+        this.nazwaProduktu = nazwaProduktu;
     }
 
-    //kolor
-
-    public String getKolorUbran(){
-        return kolorUbran;
+    public void setDostawca(dostawcy dostawca) {
+        this.dostawca = dostawca;
     }
 
-    public void setKolorUbran(String kolorUbran) {
-        this.kolorUbran = kolorUbran;
+    public void setCenaCiuchu(double cenaCiuchu) {
+        this.cenaCiuchu = cenaCiuchu;
     }
 
-    //rozmiar
-
-    public String getRozmiarUbran(){
-        return rozmiarUbran;
-    }
-
-    public void setRozmiarUbran(String rozmiarUbran) {
-        this.rozmiarUbran = rozmiarUbran;
-    }
-
-
-    //nazwa
-
-    public String getnazwaUbran(){
-        return nazwaUbran;
-    }
-
-    public void setNazwaUbran(String nazwaUbran) {
-        this.nazwaUbran = nazwaUbran;
+    @Override
+    public String toString() {
+        return "Nazwa: " + nazwaProduktu + ", Cena " + cenaCiuchu + ", dostawca " + dostawca ;
     }
 }
+
 
