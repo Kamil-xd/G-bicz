@@ -118,6 +118,53 @@ public class Interfejs {
                 break;
 
             case 4:
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Podaj rodzaj produktu, który chcesz wyszukać (agd / rtv / ciuchy / ksiazki): ");
+                rodzaj = scanner.nextLine();
+
+                if (rodzaj.equals("agd")) {
+                    if (dataManager.listaAgdNaSprzedaz.isEmpty()) {
+                        System.out.println("Brak produktów AGD na sprzedaż.");
+                    } else {
+                        System.out.println("Lista produktów AGD na sprzedaż:");
+                        for (agdNaSprzedaz produkt : dataManager.listaAgdNaSprzedaz) {
+                            System.out.println(produkt);
+                        }
+                    }
+
+                } else if (rodzaj.equals("rtv")) {
+                    if (dataManager.listaRtvNaSprzedaz.isEmpty()) {
+                        System.out.println("Brak produktów RTV na sprzedaż.");
+                    } else {
+                        System.out.println("Lista produktów RTV na sprzedaż:");
+                        for (rtvNaSprzedaz produkt : dataManager.listaRtvNaSprzedaz) {
+                            System.out.println(produkt);
+                        }
+                    }
+
+                } else if (rodzaj.equals("ciuchy")) {
+                    if (dataManager.listaCiuchowNaSprzedaz.isEmpty()) {
+                        System.out.println("Brak ubrań na sprzedaż.");
+                    } else {
+                        System.out.println("Lista ubrań na sprzedaż:");
+                        for (ciuchyNaSprzedaz produkt : dataManager.listaCiuchowNaSprzedaz) {
+                            System.out.println(produkt);
+                        }
+                    }
+
+                } else if (rodzaj.equals("ksiazki")) {
+                    if (dataManager.listaKsiazekNaSprzedaz.isEmpty()) {
+                        System.out.println("Brak książek na sprzedaż.");
+                    } else {
+                        System.out.println("Lista książek na sprzedaż:");
+                        for (ksiazkiNaSprzedaz produkt : dataManager.listaKsiazekNaSprzedaz) {
+                            System.out.println(produkt);
+                        }
+                    }
+
+                } else {
+                    System.out.println("Nieprawidłowy rodzaj produktu!");
+                }
 
                 break;
 
