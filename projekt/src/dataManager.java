@@ -8,7 +8,7 @@ public class dataManager {
         public static ArrayList<agdNaSprzedaz> listaAgdNaSprzedaz = new ArrayList<>();
         public static ArrayList<rtvNaSprzedaz> listaRtvNaSprzedaz = new ArrayList<>();
         public static ArrayList<ksiazkiNaSprzedaz> listaKsiazekNaSprzedaz = new ArrayList<>();
-        public static ArrayList<ciuchyNaSprzedaz> listCiuchowNaSprzedaz = new ArrayList<>();
+        public static ArrayList<ciuchyNaSprzedaz> listaCiuchowNaSprzedaz = new ArrayList<>();
 
 
 }
