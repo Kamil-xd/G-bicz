@@ -11,7 +11,13 @@ public class ksiazkiNaSprzedaz {
     }
     //rodzaj
 
+    public dostawcy getDostawca() {
+        return dostawca;
+    }
 
+    public String getNazwaProduktu() {
+        return nazwaProduktu;
+    }
 
     //cena
 
