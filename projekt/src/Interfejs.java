@@ -95,6 +95,7 @@ public class Interfejs {
                 }
 
 
+
                 switch (rodzaj) {
                     case "agd" -> dataManager.listaAgdNaSprzedaz.add(new agdNaSprzedaz(nazwaProduktu, cenaProduktu, dostawca));
                     case "rtv" -> dataManager.listaRtvNaSprzedaz.add(new rtvNaSprzedaz(nazwaProduktu, cenaProduktu, dostawca));
@@ -102,6 +103,8 @@ public class Interfejs {
                     case "ksiazki" -> dataManager.listaKsiazekNaSprzedaz.add(new ksiazkiNaSprzedaz(nazwaProduktu, cenaProduktu, dostawca));
                     default -> System.out.println("Nieprawidłowy rodzaj produktu!");
                 }
+                break;
+
 
 
 
