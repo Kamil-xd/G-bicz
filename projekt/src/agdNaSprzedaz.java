@@ -25,7 +25,7 @@ public class agdNaSprzedaz {
     }
 
 
-    public void setCenaAgd(Integer cenaAgd) {
+    public void setCenaAgd(double cenaAgd) {
         this.cenaAgd = cenaAgd;
     }
 
