@@ -1,0 +1,308 @@
+package com.twojeimie.myapplication;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText editpyt, editodp, odpowiedzquiz;
+    Button butn, startquiz, sprawdz, zakoncz;
+    ListView lista;
+    TextView pytaniequiz;
+    LinearLayout sKreatora, sQuiz;
+
+    ArrayList<Fiszka> listaFiszek;
+    ArrayAdapter<Fiszka> adapter;
+
+    Fiszka aktualnaFiszka;
+    Random random = new Random();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        editodp = findViewById(R.id.editodpowiedz);
+        editpyt = findViewById(R.id.editPytanie);
+        butn = findViewById(R.id.butDodaj);
+        lista = findViewById(R.id.lista);
+
+        odpowiedzquiz = findViewById(R.id.odpowiedzquiz);
+        startquiz = findViewById(R.id.startquiz);
+        sprawdz = findViewById(R.id.sprawdz);
+        zakoncz = findViewById(R.id.zakoncz);
+        pytaniequiz = findViewById(R.id.pytaniequiz);
+
+        sKreatora = findViewById(R.id.sekcjaKreatora);
+        sQuiz = findViewById(R.id.sekcjaQuiz);
+
+        listaFiszek = new ArrayList<>();
+
+        adapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_list_item_1,
+                listaFiszek
+        );
+
+        lista.setAdapter(adapter);
+
+        butn.setOnClickListener(v -> dodajFiszke());
+
+        startquiz.setOnClickListener(v -> {
+
+            if (listaFiszek.isEmpty()) {
+                Toast.makeText(
+                        MainActivity.this,
+                        "Brak fiszek!",
+                        Toast.LENGTH_SHORT
+                ).show();
+                return;
+            }
+
+            sKreatora.setVisibility(View.GONE);
+            sQuiz.setVisibility(View.VISIBLE);
+
+            odpowiedzquiz.setText("");
+
+            wylosujFiszke();
+        });
+
+        sprawdz.setOnClickListener(v -> sprawdzOdpowiedz());
+
+        zakoncz.setOnClickListener(v -> {
+
+            sKreatora.setVisibility(View.VISIBLE);
+            sQuiz.setVisibility(View.GONE);
+
+        });
+
+        aktualizujPrzyciskQuiz();
+    }
+
+    void dodajFiszke() {
+
+        String pyt = editpyt.getText().toString().trim();
+        String odp = editodp.getText().toString().trim();
+
+        if (pyt.isEmpty() || odp.isEmpty()) {
+
+            Toast.makeText(
+                    this,
+                    "Uzupełnij oba pola",
+                    Toast.LENGTH_SHORT
+            ).show();
+
+            return;
+        }
+
+        Fiszka nowa = new Fiszka(pyt, odp);
+
+        listaFiszek.add(nowa);
+
+        adapter.notifyDataSetChanged();
+
+        editpyt.setText("");
+        editodp.setText("");
+
+        aktualizujPrzyciskQuiz();
+    }
+
+    void wylosujFiszke() {
+
+        int indeks = random.nextInt(listaFiszek.size());
+
+        aktualnaFiszka = listaFiszek.get(indeks);
+
+        pytaniequiz.setText(aktualnaFiszka.getPytanie());
+    }
+
+    void sprawdzOdpowiedz() {
+
+        String wpisana =
+                odpowiedzquiz.getText().toString().trim();
+
+        String poprawna =
+                aktualnaFiszka.getOdpowiedz().trim();
+
+        if (wpisana.equalsIgnoreCase(poprawna)) {
+
+            Toast.makeText(
+                    this,
+                    "Poprawna odpowiedź!",
+                    Toast.LENGTH_SHORT
+            ).show();
+
+        } else {
+
+            Toast.makeText(
+                    this,
+                    "Błędna odpowiedź!\nPoprawna: " + poprawna,
+                    Toast.LENGTH_SHORT
+            ).show();
+        }
+
+        odpowiedzquiz.setText("");
+
+        wylosujFiszke();
+    }
+
+    void aktualizujPrzyciskQuiz() {
+
+        startquiz.setEnabled(!listaFiszek.isEmpty());
+    }
+}
+
+
+
+
+
+
+
+
+
+fiszka.java
+
+
+package com.example.fiszkiapp;
+
+public class Fiszka {
+
+    private String pytanie;
+    private String odpowiedz;
+
+    public Fiszka(String pytanie, String odpowiedz) {
+        this.pytanie = pytanie;
+        this.odpowiedz = odpowiedz;
+    }
+
+    public String getPytanie() {
+        return pytanie;
+    }
+
+    public String getOdpowiedz() {
+        return odpowiedz;
+    }
+
+    @Override
+    public String toString() {
+        return "Pytanie: " + pytanie + " | Odpowiedź: " + odpowiedz;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/sekcjaKreatora"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editPytanie"
+            android:hint="Wpisz pytanie"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editodpowiedz"
+            android:hint="Wpisz odpowiedz"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/butDodaj"
+            android:text="Dodaj"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/startquiz"
+            android:text="rozpocznij"
+            android:layout_marginTop="8dp"/>
+
+        <ListView
+            android:id="@+id/lista"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sekcjaQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/pytaniequiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pytanie"
+            android:textSize="24sp"
+            android:padding="16dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/odpowiedzquiz"
+            android:hint="wpisz odpowiedz:"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sprawdz odpowiedz"
+            android:layout_marginTop="8dp"
+            android:id="@+id/sprawdz"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/zakoncz"
+            android:text="zakoncz"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
