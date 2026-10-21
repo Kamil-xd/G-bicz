@@ -1,0 +1,43 @@
+plik = "dane.txt"
+
+while True:
+    print("\n1. Odczyt")
+    print("2. Dopisz")
+    print("3. Nadpisz")
+    print("4. Wyczyść")
+    print("5. Szukaj")
+    print("6. Numerowane linie")
+    print("7. Koniec")
+    wybor = input("Wybierz: ")
+
+    if wybor == "1":
+        try:
+            print(open(plik).read())
+        except FileNotFoundError:
+            print("Plik nie istnieje")
+
+    elif wybor == "2":
+        open(plik, "a").write(input("Tekst: ") + "\n")
+
+    elif wybor == "3":
+        open(plik, "w").write(input("Nowy tekst: ") + "\n")
+
+    elif wybor == "4":
+        open(plik, "w").close()
+
+    elif wybor == "5":
+        fraza = input("Szukana fraza: ")
+        try:
+            print("Wystąpień:", open(plik).read().count(fraza))
+        except FileNotFoundError:
+            print("Plik nie istnieje")
+
+    elif wybor == "6":
+        try:
+            for i, linia in enumerate(open(plik), 1):
+                print(i, linia, end="")
+        except FileNotFoundError:
+            print("Plik nie istnieje")
+
+    elif wybor == "7":
+        break
